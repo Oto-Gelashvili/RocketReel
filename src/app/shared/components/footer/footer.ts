@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
-export class Footer {}
+export class Footer {
+  currentYear = new Date().getFullYear();
+  author = 'Oto Gelashvili';
+  githubUrl = 'https://github.com/Oto-Gelashvili';
+}

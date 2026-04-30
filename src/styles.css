@@ -285,9 +285,10 @@ h5 {
 }
 
 main {
-  padding: 3.6rem 8.4rem;
-  min-height: calc(100vh - var(--fixed-header-height));
+  padding-inline: 8.4rem;
+  flex: 1;
   display: flex;
+  align-items: center;
 }
 
 .primaryBtn {
@@ -384,4 +385,10 @@ main {
   main {
     padding-inline: 2.4rem;
   }
+}
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 3.6rem;
 }

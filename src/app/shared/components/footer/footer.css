@@ -1,0 +1,29 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 8.4rem;
+  border-top: 1px solid var(--grey-200);
+  gap: 1.2rem;
+}
+.descCont {
+  display: flex;
+  gap: 0.4rem;
+}
+footer p {
+  font-size: var(--btn-m);
+  color: var(--grey-500);
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding-inline: 3.6rem;
+  }
+  .descCont {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  footer {
+    padding: 2.4rem;
+  }
+}
