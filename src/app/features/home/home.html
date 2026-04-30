@@ -1,1 +1,5 @@
-<p>home works!</p>
+@for (film of films(); track film.id) {
+  <a [routerLink]="['/films', film.id]">
+    <p>{{ film.title }}</p>
+  </a>
+}
