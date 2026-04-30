@@ -1,0 +1,56 @@
+header {
+  padding: 2.4rem 8.4rem;
+  border-bottom: 1px solid var(--grey-200);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  height: var(--fixed-header-height);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background: var(--grey-100);
+}
+h2 {
+  color: var(--brand-500);
+  transition: 0.4s;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+h2:hover,
+h2:focus-visible {
+  color: var(--brand-600);
+}
+h2:active {
+  color: var(--brand-700);
+}
+.title img {
+  width: 51.2px;
+  height: 51.2px;
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding-inline: 3.6rem;
+  }
+
+  h2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  header {
+    padding: 2.4rem;
+  }
+  nav {
+    gap: 1.2rem;
+  }
+}

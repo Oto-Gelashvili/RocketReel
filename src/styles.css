@@ -1,1 +1,387 @@
+:root {
+  /* text styles */
+  --hero-fs: 4.8rem;
+  --hero-fw: 700;
+
+  --xl-light-fw: 300;
+
+  --xl-fs: 2.4rem;
+  --xl-fw: 600;
+
+  --l-fs: 2rem;
+
+  --m-fs: 1.8rem;
+
+  --s-fs: 1.6rem;
+
+  --xs-fs: 1.4rem;
+
+  --helper-m-fs: 1.2rem;
+
+  --helper-rm-fs: 1.4rem;
+  --helper-rs-fs: 1.2rem;
+  --helper-r-fw: 400;
+
+  --helper-m-fs: 1.2rem;
+
+  --helper-rxs-fs: 1rem;
+  --helper-rxs-fw: 400;
+
+  --under-m: 2rem;
+  --under-s: 1.4rem;
+
+  --btn-m: 2rem;
+  --btn-s: 1.6rem;
+
+  /* colors */
+  --brand-50: #eeedfc;
+  --brand-100: #dddbfa;
+  --brand-200: #b7b3f4;
+  --brand-300: #958fef;
+  --brand-400: #736bea;
+  --brand-500: #4f46e5;
+  --brand-600: #281ed2;
+  --brand-700: #1e169d;
+  --brand-800: #130e67;
+  --brand-900: #0a0836;
+  --brand-950: #05041b;
+
+  --grey-50: #ffffff;
+  --grey-100: #f5f5f5;
+  --grey-200: #d1d1d1;
+  --grey-300: #adadad;
+  --grey-400: #8a8a8a;
+  --grey-500: #666666;
+  --grey-600: #525252;
+  --grey-700: #3d3d3d;
+  --grey-800: #292929;
+  --grey-900: #141414;
+  --grey-950: #0a0a0a;
+  --grey-disabled: #c1bcbc80;
+
+  --error: #f4161a;
+  --error-light: #f66466;
+  --warning: #f4a316;
+  --success: #1dc31d;
+  --success-light: #1dc31d1a;
+
+  --fixed-header-height: 9.2rem;
+}
 /* You can add global styles to this file, and also import other style files */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  /* line-height: 1.5; */
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/*
+  10. stanardize lists
+*/
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*
+  10. stanardize links
+*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove mobile tap highlight globally */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  background-color: var(--grey-100);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey-300) transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--grey-100);
+  border-radius: 999px;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.buttonS {
+  height: 4.7rem;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--brand-500);
+  font-size: var(--btn-s);
+  color: var(--grey-50);
+  width: 100%;
+  border: 2px solid transparent;
+  transition: 0.4s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonS:hover,
+.buttonS:focus-visible {
+  background-color: var(--brand-600);
+}
+.buttonS:active {
+  background-color: var(--brand-700);
+}
+.buttonS:focus-visible {
+  border-color: var(--brand-700);
+}
+.buttonS:disabled {
+  background-color: var(--grey-300) !important;
+  color: var(--grey-400);
+}
+.generalError {
+  color: var(--error);
+}
+.circleIndicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--success);
+  border: 2px solid var(--grey-50);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.incompleteCircleIndicator {
+  background-color: var(--warning);
+}
+
+.fade-in {
+  animation: fade-in 0.4s;
+}
+.fade-out {
+  animation: fade-out 0.4s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+main {
+  padding: 3.6rem 8.4rem;
+  min-height: calc(100vh - var(--fixed-header-height));
+  display: flex;
+}
+
+.primaryBtn {
+  font-size: var(--btn-m);
+  color: var(--grey-50);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.8rem;
+  background-color: var(--brand-500);
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.primaryBtn:hover {
+  color: var(--grey-50);
+  background-color: var(--brand-600);
+  border-color: var(--brand-600);
+}
+.primaryBtn:active {
+  color: var(--grey-50);
+  background-color: var(--brand-700);
+  border-color: var(--brand-700);
+}
+.primaryBtn:focus-visible {
+  border-color: var(--brand-700);
+  background-color: var(--brand-600);
+}
+
+.ctaBtnOutline {
+  font-size: var(--btn-m);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.8rem;
+  border: 2px solid var(--brand-300);
+  background-color: transparent;
+  color: var(--brand-500);
+  transition: 0.4s;
+  cursor: pointer;
+}
+.ctaBtnOutline:hover {
+  color: var(--grey-50);
+  background-color: var(--brand-600);
+  border-color: var(--brand-600);
+}
+.ctaBtnOutline:active {
+  color: var(--grey-50);
+  background-color: var(--brand-700);
+  border-color: var(--brand-700);
+}
+.ctaBtnOutline:focus-visible {
+  border-color: var(--brand-100);
+  border-style: dashed;
+  border-spacing: 2px;
+  background-color: var(--brand-700);
+  color: var(--grey-50);
+}
+
+.open-animation {
+  animation: open-animation 0.6s;
+}
+.close-animation {
+  animation: close-animation 1s;
+}
+
+@keyframes open-animation {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    transform: scale(1);
+    max-height: fit-content;
+  }
+}
+
+@keyframes close-animation {
+  from {
+    max-height: fit-content;
+    pointer-events: none;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+    margin: 0;
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding-inline: 3.6rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  main {
+    padding-inline: 2.4rem;
+  }
+}
