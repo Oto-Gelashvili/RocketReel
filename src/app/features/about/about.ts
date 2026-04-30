@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
 
 @Component({
   selector: 'app-about',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
-export class About {}
+export class About implements OnInit {
+  breadcrumbsService = inject(BreadcrumbsService);
+
+  ngOnInit() {
+    this.breadcrumbsService.set([{ label: 'About' }]);
+  }
+}

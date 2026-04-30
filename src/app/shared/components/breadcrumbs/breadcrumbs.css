@@ -1,0 +1,35 @@
+nav {
+  padding: 4.8rem 8.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: var(--m-fs);
+}
+
+a,
+span,
+.arrow {
+  color: var(--grey-500);
+  transition: 0.4s;
+}
+a:last-child {
+  color: var(--brand-400);
+}
+a:hover,
+a:focus-visible {
+  color: var(--brand-500);
+}
+a:active {
+  color: var(--brand-600);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding-inline: 3.6rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  nav {
+    padding-inline: 2.4rem;
+  }
+}
