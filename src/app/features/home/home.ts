@@ -2,10 +2,11 @@ import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
 import { FilmService } from '../../core/services/film.service';
 import { Router } from '@angular/router';
+import { AutofocusDirective } from '../../shared/directives/autofocus.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [AutofocusDirective],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
