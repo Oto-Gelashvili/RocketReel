@@ -3,10 +3,11 @@ import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
 import { FilmService } from '../../core/services/film.service';
 import { Router } from '@angular/router';
 import { AutofocusDirective } from '../../shared/directives/autofocus.directive';
+import { FilmCard } from '../../shared/components/film-card/film-card';
 
 @Component({
   selector: 'app-home',
-  imports: [AutofocusDirective],
+  imports: [AutofocusDirective, FilmCard],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

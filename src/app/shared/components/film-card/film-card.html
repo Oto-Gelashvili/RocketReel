@@ -1,0 +1,19 @@
+<div class="card" (click)="onOpen()">
+  <img [src]="film.posterUrl" [alt]="film.title" />
+
+  <div class="card-content">
+    <div class="titleCont">
+      <h3>{{ film.title }}</h3>
+
+      <span class="star" [class.favorited]="film.isFavorite" (click)="onToggleFavorite($event)">
+        ★
+      </span>
+    </div>
+
+    <p class="meta">{{ film.year }} • {{ film.genre }} • {{ film.rating }} ★</p>
+
+    <button class="primaryBtn" (click)="onToggleFavorite($event)">
+      {{ film.isFavorite ? 'Remove' : 'Add To Favourites' }}
+    </button>
+  </div>
+</div>
