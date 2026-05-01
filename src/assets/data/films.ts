@@ -10,7 +10,7 @@ export const FILMS: Film[] = [
     duration: 169,
     description:
       'When drought, dust storms, and the extinction of crops lead humanity to a food crisis, a team of explorers and scientists travels through a wormhole in search of a new home for mankind.',
-    posterUrl: 'https://placehold.co/300x450?text=Interstellar',
+    posterUrl: 'inter.jpg',
     isFavorite: false,
   },
   {
@@ -22,7 +22,7 @@ export const FILMS: Film[] = [
     duration: 148,
     description:
       'Cobb is a skilled thief, the best of the best in the dangerous art of extraction: he steals valuable secrets from deep within the subconscious during sleep.',
-    posterUrl: 'https://placehold.co/300x450?text=Inception',
+    posterUrl: 'inception.jpg',
     isFavorite: false,
   },
   {
@@ -34,7 +34,7 @@ export const FILMS: Film[] = [
     duration: 142,
     description:
       'Banker Andy Dufresne is convicted of murdering his wife and her lover. Finding himself in a prison called Shawshank, he faces the cruelty and lawlessness that reign on both sides of the bars.',
-    posterUrl: 'https://placehold.co/300x450?text=Shawshank',
+    posterUrl: 'redemption.jpg',
     isFavorite: false,
   },
   {
@@ -46,7 +46,7 @@ export const FILMS: Film[] = [
     duration: 152,
     description:
       "Batman raises the stakes in his war on crime. With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, he seeks to rid Gotham's streets of crime.",
-    posterUrl: 'https://placehold.co/300x450?text=Dark+Knight',
+    posterUrl: 'dark.jpg',
     isFavorite: false,
   },
   {
@@ -58,7 +58,7 @@ export const FILMS: Film[] = [
     duration: 142,
     description:
       'A simple-minded man from Alabama named Forrest Gump inadvertently finds himself at the center of key events in American history during the second half of the 20th century.',
-    posterUrl: 'https://placehold.co/300x450?text=Forrest+Gump',
+    posterUrl: 'forest.jpg',
     isFavorite: false,
   },
   {
@@ -70,7 +70,7 @@ export const FILMS: Film[] = [
     duration: 136,
     description:
       'Hacker Neo discovers that the reality he lives in is merely a simulation created by machines. He must make a choice that will change the fate of humanity.',
-    posterUrl: 'https://placehold.co/300x450?text=Matrix',
+    posterUrl: 'matrix.jpg',
     isFavorite: false,
   },
   {
@@ -82,7 +82,7 @@ export const FILMS: Film[] = [
     duration: 139,
     description:
       'An insomniac office worker and a charismatic soap salesman form an underground fight club that quickly evolves into something much greater.',
-    posterUrl: 'https://placehold.co/300x450?text=Fight+Club',
+    posterUrl: 'fight.jpg',
     isFavorite: false,
   },
   {
@@ -94,7 +94,7 @@ export const FILMS: Film[] = [
     duration: 201,
     description:
       'The final battle for Middle-earth begins. Frodo and Sam approach Mount Doom, while Aragorn must embrace his destiny and lead the armies of the free peoples into battle.',
-    posterUrl: 'https://placehold.co/300x450?text=LOTR+ROTK',
+    posterUrl: 'goat.jpg',
     isFavorite: false,
   },
   {
@@ -106,7 +106,7 @@ export const FILMS: Film[] = [
     duration: 195,
     description:
       'The story of German industrialist Oskar Schindler, who saved more than a thousand Polish Jews during the Holocaust by employing them in his factories.',
-    posterUrl: 'https://placehold.co/300x450?text=Schindlers+List',
+    posterUrl: 'liam.jpg',
     isFavorite: false,
   },
   {
@@ -118,7 +118,7 @@ export const FILMS: Film[] = [
     duration: 154,
     description:
       "Several intertwining stories from the Los Angeles criminal underworld: two hitmen, a gangster's wife, a boxer, and a pair of diner robbers.",
-    posterUrl: 'https://placehold.co/300x450?text=Pulp+Fiction',
+    posterUrl: 'pulp.jpg',
     isFavorite: false,
   },
   {
@@ -130,7 +130,7 @@ export const FILMS: Film[] = [
     duration: 189,
     description:
       'A death row corrections officer at a Louisiana penitentiary discovers that one of the inmates possesses a supernatural gift of healing.',
-    posterUrl: 'https://placehold.co/300x450?text=Green+Mile',
+    posterUrl: 'green.jpg',
     isFavorite: false,
   },
   {
@@ -142,7 +142,7 @@ export const FILMS: Film[] = [
     duration: 155,
     description:
       'Roman general Maximus is betrayed by the emperor and sold into slavery. Becoming a gladiator, he fights in the Colosseum arena to avenge his family.',
-    posterUrl: 'https://placehold.co/300x450?text=Gladiator',
+    posterUrl: 'goat2.jpg',
     isFavorite: false,
   },
 ];

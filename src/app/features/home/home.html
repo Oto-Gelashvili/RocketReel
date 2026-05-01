@@ -1,5 +1,24 @@
-@for (film of films(); track film.id) {
-  <a [routerLink]="['/films', film.id]">
-    <p>{{ film.title }}</p>
-  </a>
-}
+<div class="grid">
+  @for (film of films(); track film.id) {
+    <div class="card" (click)="openDetails(film.id)">
+      <img [src]="film.posterUrl" [alt]="film.title" />
+
+      <div class="card-content">
+        <div class="titleCont">
+          <h3>{{ film.title }}</h3>
+          <span
+            class="star"
+            [class.favorited]="film.isFavorite"
+            (click)="toggleFavorite(film.id); $event.stopPropagation()"
+          >
+            ★
+          </span>
+        </div>
+        <p class="meta">{{ film.year }} • {{ film.genre }} • {{ film.rating }} ★</p>
+        <button class="primaryBtn" (click)="toggleFavorite(film.id); $event.stopPropagation()">
+          {{ film.isFavorite ? 'Remove' : 'Add To Favourites' }}
+        </button>
+      </div>
+    </div>
+  }
+</div>
