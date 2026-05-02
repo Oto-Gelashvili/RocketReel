@@ -1,0 +1,29 @@
+:host {
+  flex: 1;
+}
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.about h2 {
+  margin-top: 2.4rem;
+}
+
+.about pre {
+  background: var(--grey-100);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.about p,
+li {
+  color: var(--grey-500);
+  font-size: var(--btn-s);
+}
