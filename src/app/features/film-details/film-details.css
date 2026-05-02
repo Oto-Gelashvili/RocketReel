@@ -1,0 +1,67 @@
+:host {
+  flex: 1;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.ctaBtnOutline {
+  width: fit-content;
+  font-size: var(--btn-s);
+}
+
+.content {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.content img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.info h1 {
+  font-size: 3.2rem;
+}
+
+.meta {
+  font-size: var(--btn-s);
+
+  color: var(--grey-500);
+}
+
+.description {
+  line-height: 1.6;
+  max-width: 600px;
+  font-size: var(--btn-m);
+}
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .content img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .header input {
+    width: 100%;
+    padding-block: 1.2rem;
+  }
+}

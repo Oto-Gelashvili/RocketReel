@@ -1,1 +1,21 @@
-<p>film-details works!</p>
+@if (film(); as f) {
+  <div class="details">
+    <button class="ctaBtnOutline" (click)="goBack()">← Back</button>
+
+    <div class="content">
+      <img [src]="f.posterUrl" [alt]="f.title" />
+
+      <div class="info">
+        <h1>{{ f.title }}</h1>
+
+        <p class="meta">
+          {{ f.year }} • {{ f.genre }} • {{ f.rating }} ★ • {{ f.duration | duration }}
+        </p>
+
+        <p class="description">
+          {{ f.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+}

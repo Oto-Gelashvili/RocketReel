@@ -1,11 +1,14 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
 import { FilmService } from '../../core/services/film.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Film } from '../models/film.model';
+import { DurationPipe } from '../../shared/pipes/duration-pipe';
 
 @Component({
   selector: 'app-film-details',
   templateUrl: './film-details.html',
+  imports: [DurationPipe],
   styleUrl: './film-details.css',
 })
 export class FilmDetails implements OnInit {
@@ -13,6 +16,7 @@ export class FilmDetails implements OnInit {
   private filmService = inject(FilmService);
   private router = inject(Router);
   private activatedRoute = inject(ActivatedRoute);
+  film = signal<Film | null>(null);
 
   ngOnInit() {
     const idParam = this.activatedRoute.snapshot.paramMap.get('id');
@@ -23,13 +27,18 @@ export class FilmDetails implements OnInit {
       return;
     }
 
-    const film = this.filmService.getById(id);
+    const foundFilm = this.filmService.getById(id);
 
-    if (!film) {
+    if (!foundFilm) {
       this.router.navigate(['/']);
       return;
     }
 
-    this.breadcrumbsService.set([{ label: 'Home', link: '/' }, { label: film.title }]);
+    this.film.set(foundFilm);
+
+    this.breadcrumbsService.set([{ label: 'Home', link: '/' }, { label: foundFilm.title }]);
+  }
+  goBack() {
+    this.router.navigate(['/']);
   }
 }
