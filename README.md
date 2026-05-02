@@ -9,7 +9,7 @@ Users can explore movies, view detailed information, and mark favorites.
 
 The app is deployed and available here:
 
-👉 https://rocketreel.vercel.app
+👉 https://rocketreel-liart.vercel.app
 
 ---
 
